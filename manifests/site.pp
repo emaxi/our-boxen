@@ -78,21 +78,25 @@ node default {
   package {
     [
       'ack',
-      'htop',
       'findutils',
       'gnu-tar',
-      'qt':
-        install_options => [
-          '--HEAD'
-        ]
+      'htop',
+      'tmux',
+      'wget'
     ]:
   }
+
+  # package {
+  #   'qt': install_options => [ '--HEAD' ]
+  # }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
   }
 
+  include adium
+  include caffeine
   include clipmenu
   include dropbox
   include googledrive
@@ -101,14 +105,21 @@ node default {
   include macvim
   include mongodb
   include mysql
-  include notational_velocity::nvalt
   include redis
   include pow
+  include qt
   include quicksilver
   include skype
+  include slate
   # include spotify
   include sourcetree
   include vagrant
   include virtualbox
   include vlc
+
+  package { 'GoogleVoiceAndVideoSetup':
+    source => 'http://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg',
+    provider => pkgdmg,
+  }
+
 }
