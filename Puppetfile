@@ -59,3 +59,21 @@ github "xquartz",     "1.1.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+
+github "cyberduck"
+github "clipmenu"
+github "dropbox"
+github "imagemagick"
+github "googledrive"
+github "java"
+github "macvim"
+github "mysql"
+# github "nvalt"
+github "pow"
+github "skype"
+github "spotify"
+github "sourcetree"
+github "vagrant"
+github "virtualbox"
+github "vlc"
+

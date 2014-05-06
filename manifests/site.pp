@@ -1,7 +1,4 @@
-require boxen::environment
-require homebrew
-require gcc
-
+require boxen::environment require homebrew require gcc 
 Exec {
   group       => 'staff',
   logoutput   => on_failure,
@@ -78,8 +75,10 @@ node default {
   package {
     [
       'ack',
+      'htop',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'qt'
     ]:
   }
 
@@ -88,5 +87,19 @@ node default {
     target => $boxen::config::repodir
   }
 
+  include clipmenu
+  include dropbox
+  include googledrive
+  include imagemagick
+  include java
+  include macvim
+  include mysql
+  # include nvalt
+  include pow
   include skype
+  # include spotify
+  include sourcetree
+  include vagrant
+  include virtualbox
+  include vlc
 }
