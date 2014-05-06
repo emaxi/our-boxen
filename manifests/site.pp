@@ -97,7 +97,7 @@ node default {
   include java
   include macvim
   include mysql
-  # include nvalt
+  include notational_velocity
   include pow
   include quicksilver
   include skype
