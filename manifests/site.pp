@@ -1,4 +1,7 @@
-require boxen::environment require homebrew require gcc 
+require boxen::environment 
+require homebrew 
+require gcc 
+
 Exec {
   group       => 'staff',
   logoutput   => on_failure,
@@ -96,6 +99,7 @@ node default {
   include mysql
   # include nvalt
   include pow
+  include quicksilver
   include skype
   # include spotify
   include sourcetree
