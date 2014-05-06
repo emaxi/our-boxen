@@ -81,7 +81,10 @@ node default {
       'htop',
       'findutils',
       'gnu-tar',
-      'qt'
+      'qt':
+        install_options => [
+          '--HEAD'
+        ]
     ]:
   }
 
@@ -96,8 +99,10 @@ node default {
   include imagemagick
   include java
   include macvim
+  include mongodb
   include mysql
   include notational_velocity::nvalt
+  include redis
   include pow
   include quicksilver
   include skype
