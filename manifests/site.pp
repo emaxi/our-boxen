@@ -110,6 +110,7 @@ node default {
   include pow
   include qt
   include quicksilver
+  include sequel_pro
   include skype
   include slate
   # include spotify

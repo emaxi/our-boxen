@@ -1,16 +1,36 @@
 class people::emaxi { 
  notify { 'class people::emaxi declared': }
 
-#   $home = "/Users/${::boxen_user}"
-#   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
-#   
-#   repository { $dotfiles_dir:
-#     source => "${::github_user}/dotfiles"
-#   }
-#   
-#   file { "${home}/.bashrc":
-#     ensure  => link,
-#     target  => "${dotfiles_dir}/bashrc",
-#     require => Repository[$dotfiles_dir]
-#   }
+  # My dotfile repository
+
+  $home     = "/Users/${::boxen_user}"
+  $bin      = "${home}/bin"
+  $dotfiles = "${bin}/dotfiles"
+
+  file { $bin:
+    ensure  => directory
+  }
+
+  repository { $dotfiles:
+    source  => 'emaxi/dotfiles',
+    require => File[$bin]
+  }
+
+  file { "${home}/.bash_profile":
+    ensure  => link,
+    target  => "${dotfiles}/bashrc",
+    require => Repository[$dotfiles]
+  }
+
+  file { "${home}/.gemrc":
+    ensure  => link,
+    target  => "${dotfiles}/gemrc",
+    require => Repository[$dotfiles]
+  }
+
+  file { "${home}/.gitconfig":
+    ensure  => link,
+    target  => "${dotfiles}/gitconfig",
+    require => Repository[$dotfiles]
+  }
 }
