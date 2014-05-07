@@ -204,6 +204,11 @@ GITHUBTARBALL
     xquartz (1.1.1)
 
 GITHUBTARBALL
+  remote: jozefizso/puppet-sublime_text_3
+  specs:
+    sublime_text_3 (1.0.1)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.0.3)
@@ -217,6 +222,11 @@ GITHUBTARBALL
   remote: ripienaar/puppet-module-data
   specs:
     module-data (0.0.3)
+
+GITHUBTARBALL
+  remote: tholex/puppet-nvalt
+  specs:
+    nvalt (1.0.1)
 
 DEPENDENCIES
   adium (>= 0)
@@ -244,6 +254,7 @@ DEPENDENCIES
   mysql (>= 0)
   nginx (= 1.4.3)
   nodejs (= 3.7.0)
+  nvalt (= 1.0.1)
   openssl (= 1.0.0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
@@ -258,6 +269,7 @@ DEPENDENCIES
   sourcetree (>= 0)
   spotify (>= 0)
   stdlib (= 4.1.0)
+  sublime_text_3 (= 1.0.1)
   sudo (= 1.0.0)
   vagrant (>= 0)
   virtualbox (>= 0)

@@ -101,6 +101,7 @@ node default {
   include dropbox
   include googledrive
   include imagemagick
+  include nvalt::beta
   include java
   include macvim
   include mongodb
@@ -116,6 +117,9 @@ node default {
   include vagrant
   include virtualbox
   include vlc
+
+  include sublime_text_3
+  include sublime_text_3::package_control
 
   package { 'GoogleVoiceAndVideoSetup':
     source => 'http://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg',
