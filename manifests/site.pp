@@ -127,4 +127,8 @@ node default {
     provider => pkgdmg,
   }
 
+  class { 'nodejs::global':
+    version => 'v0.10'
+  }
+
 }
