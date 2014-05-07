@@ -11,6 +11,7 @@ class people::emaxi {
     ensure  => directory
   }
 
+
   repository { $dotfiles:
     source  => 'emaxi/dotfiles',
     require => File[$bin]
@@ -22,15 +23,20 @@ class people::emaxi {
     require => Repository[$dotfiles]
   }
 
-  file { "${home}/.gemrc":
-    ensure  => link,
-    target  => "${dotfiles}/gemrc",
-    require => Repository[$dotfiles]
-  }
+#  file { "${home}/.gemrc":
+#    ensure  => link,
+#    target  => "${dotfiles}/gemrc",
+#    require => Repository[$dotfiles]
+#  }
 
   file { "${home}/.gitconfig":
     ensure  => link,
     target  => "${dotfiles}/gitconfig",
     require => Repository[$dotfiles]
+  }
+
+  file { "${home}/bin/subl":
+    ensure  => link,
+    target  => "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
   }
 }
