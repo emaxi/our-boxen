@@ -122,6 +122,10 @@ node default {
   include sublime_text_3
   include sublime_text_3::package_control
 
+  include iterm2::stable
+  include iterm2::colors::solarized_light
+  include iterm2::colors::solarized_dark
+
   package { 'GoogleVoiceAndVideoSetup':
     source => 'http://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg',
     provider => pkgdmg,
