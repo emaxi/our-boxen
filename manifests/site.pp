@@ -115,6 +115,7 @@ node default {
   include slate
   # include spotify
   include sourcetree
+  include teamviewer
   include vagrant
   include virtualbox
   include vlc

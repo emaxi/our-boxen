@@ -234,6 +234,11 @@ GITHUBTARBALL
     module-data (0.0.3)
 
 GITHUBTARBALL
+  remote: singuerinc/puppet-teamviewer
+  specs:
+    teamviewer (1.0.2)
+
+GITHUBTARBALL
   remote: tholex/puppet-nvalt
   specs:
     nvalt (1.0.1)
@@ -283,6 +288,7 @@ DEPENDENCIES
   stdlib (= 4.1.0)
   sublime_text_3 (= 1.0.1)
   sudo (= 1.0.0)
+  teamviewer (= 1.0.2)
   vagrant (>= 0)
   virtualbox (>= 0)
   vlc (>= 0)
