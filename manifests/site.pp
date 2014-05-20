@@ -99,6 +99,7 @@ node default {
   include caffeine
   include clipmenu
   include dropbox
+  include gitx::l
   include googledrive
   include imagemagick
   include nvalt::beta
